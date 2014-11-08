@@ -33,13 +33,19 @@ public class hmac{
 		String signature;
 		try {
 			Scanner scanner = new Scanner(System.in);
+			System.out.println("Please enter the parameters requested for creating the HMAC MD5 hash\n");
+			System.out.println("Enter the secret key that will be used in the hash\n");
 		    String a = scanner.nextLine();
+		    System.out.println("Please enter the timestamp of your message in HH:MM format\n");
 		    String b = scanner.nextLine();
+		    System.out.println("Please enter a four digit random number\n");
 		    String c = scanner.nextLine();
+		    System.out.println("Please enter your message without spaces\n");
 		    String d = scanner.nextLine();
+		    System.out.println("Please enter an id for your message\n");
 		    String e = scanner.nextLine();
 			signature = hmac.simpleHmac(a,b,c,d,e);
- 
+		
 			
 			System.out.println(signature);
 		}
